@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Catálogo de productos cargado de manera asíncrona desde un archivo JSON">
+  <title>Golf House | Catálogo de palos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="encabezado">
+    <div class="encabezado__contenido">
+      <p class="encabezado__marca">GOLF HOUSE</p>
+      <h1>El set para jugar tu mejor golf</h1>
+      <p class="encabezado__texto">
+        Potencia desde el tee, precisión en el fairway y control alrededor del green.
+      </p>
+    </div>
+  </header>
+
+  <main class="contenido">
+    <section aria-labelledby="titulo-catalogo">
+      <div class="seccion-titulo">
+        <div>
+          <p class="seccion-titulo__etiqueta">NUESTRO CATÁLOGO</p>
+          <h2 id="titulo-catalogo">Encontrá tu próximo palo</h2>
+        </div>
+        <span id="contador-productos" class="contador" aria-live="polite"></span>
+      </div>
+
+      <div id="estado-carga" class="estado-carga" role="status">
+        <span class="cargador" aria-hidden="true"></span>
+        <p>Cargando productos...</p>
+      </div>
+
+      <div id="contenedor-productos" class="productos" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <p>Actividad Aulica 17 Da Silva Viana Juan Martin</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

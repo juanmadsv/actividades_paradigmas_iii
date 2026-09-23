@@ -1,0 +1,128 @@
+[
+  {
+    "id": 1,
+    "nombre": "Driver Taylormade Qi10 9.0°",
+    "categoria": "Driver",
+    "descripcion": "Cabeza de titanio de 460 cc y diseño aerodinámico para generar velocidad, distancia y mayor tolerancia desde el tee.",
+    "precio": 589000,
+    "stock": 5,
+    "icono": "1W"
+  },
+  {
+    "id": 2,
+    "nombre": "Madera 3 Fairway 15°",
+    "categoria": "Maderas",
+    "descripcion": "Perfil bajo y centro de gravedad optimizado para lograr vuelos altos y potentes desde el tee o el fairway.",
+    "precio": 419000,
+    "stock": 6,
+    "icono": "3W"
+  },
+  {
+    "id": 3,
+    "nombre": "Híbrido 2 Tyalormade Qi35  17°",
+    "categoria": "Híbridos",
+    "descripcion": "Alternativa versátil a los hierros largos, con lanzamiento sencillo y excelente rendimiento desde distintos lies.",
+    "precio": 339000,
+    "stock": 8,
+    "icono": "3H"
+  },
+  {
+    "id": 4,
+    "nombre": "Hierro 4 Titleist T150",
+    "categoria": "Hierros",
+    "descripcion": "Hierro largo diseñado para ofrecer distancia controlada, estabilidad en el impacto y una trayectoria penetrante.",
+    "precio": 189000,
+    "stock": 7,
+    "icono": "4I"
+  },
+  {
+    "id": 5,
+    "nombre": "Hierro 5 Titleist T150",
+    "categoria": "Hierros",
+    "descripcion": "Equilibrio entre distancia y precisión para atacar el green con confianza desde posiciones largas del fairway.",
+    "precio": 184000,
+    "stock": 9,
+    "icono": "5I"
+  },
+  {
+    "id": 6,
+    "nombre": "Hierro 6 Titleist T150",
+    "categoria": "Hierros",
+    "descripcion": "Cabeza estable y centro de gravedad bajo para conseguir un contacto sólido y un vuelo consistente.",
+    "precio": 179000,
+    "stock": 10,
+    "icono": "6I"
+  },
+  {
+    "id": 7,
+    "nombre": "Hierro 7 Titleist T150",
+    "categoria": "Hierros",
+    "descripcion": "Hierro medio versátil, con sensación suave y gran control de trayectoria en los golpes de aproximación.",
+    "precio": 174000,
+    "stock": 12,
+    "icono": "7I"
+  },
+  {
+    "id": 8,
+    "nombre": "Hierro 8 Titleist T150",
+    "categoria": "Hierros",
+    "descripcion": "Diseñado para producir golpes altos y precisos, con buen control de distancia hacia objetivos intermedios.",
+    "precio": 169000,
+    "stock": 11,
+    "icono": "8I"
+  },
+  {
+    "id": 9,
+    "nombre": "Hierro 9 Titleist T150",
+    "categoria": "Hierros",
+    "descripcion": "Loft ideal para aproximaciones controladas, con trayectoria elevada y buena capacidad para detener la pelota.",
+    "precio": 164000,
+    "stock": 13,
+    "icono": "9I"
+  },
+  {
+    "id": 10,
+    "nombre": "Pitching Wedge Titleist T150",
+    "categoria": "Hierros",
+    "descripcion": "Versátil para golpes completos y aproximaciones cortas, con control consistente de vuelo y distancia.",
+    "precio": 159000,
+    "stock": 10,
+    "icono": "PW"
+  },
+  {
+    "id": 11,
+    "nombre": "Vokey SM10 50° Wedge",
+    "categoria": "Wedges",
+    "descripcion": "Cubre la distancia entre el pitching wedge y el sand wedge, manteniendo intervalos uniformes dentro del set.",
+    "precio": 219000,
+    "stock": 8,
+    "icono": "50°"
+  },
+  {
+    "id": 12,
+    "nombre": "Vokey SM10 54° Sand Wedge",
+    "categoria": "Wedges",
+    "descripcion": "Suela versátil y estrías profundas para jugar desde el bunker, el rough o realizar aproximaciones con spin.",
+    "precio": 219000,
+    "stock": 7,
+    "icono": "54°"
+  },
+  {
+    "id": 13,
+    "nombre": "Vokey SM10 60° Lob Wedge",
+    "categoria": "Wedges",
+    "descripcion": "Máximo loft para golpes altos, salidas delicadas y situaciones que exigen detener rápidamente la pelota.",
+    "precio": 219000,
+    "stock": 6,
+    "icono": "60°"
+  },
+  {
+    "id": 14,
+    "nombre": "Scotty Cameron Blade Putter",
+    "categoria": "Putter",
+    "descripcion": "Diseño blade de alta estabilidad con líneas de alineación visibles para mejorar la dirección y controlar el ritmo.",
+    "precio": 379000,
+    "stock": 5,
+    "icono": "PT"
+  }
+]
