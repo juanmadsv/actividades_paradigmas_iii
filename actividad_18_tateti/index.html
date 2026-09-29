@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#173f3b">
+  <title>Ta Te Ti · Tres en línea</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="game">
+    <header class="header">
+      <span class="eyebrow">UN TABLERO. DOS JUGADORES.</span>
+      <h1>Ta<span>Te</span>Ti<span class="dot">.</span></h1>
+      <p>Tres fichas, muchas posibilidades.</p>
+    </header>
+
+    <section class="scores" aria-label="Marcador de la sesión">
+      <article class="player active" id="player-x">
+        <span class="symbol x">X</span>
+        <div><h2>Jugador X</h2><p id="reserve-x">3 fichas por colocar</p></div>
+        <strong id="score-x" aria-label="Victorias de X">0</strong>
+      </article>
+      <article class="player" id="player-o">
+        <span class="symbol o">O</span>
+        <div><h2>Jugador O</h2><p id="reserve-o">3 fichas por colocar</p></div>
+        <strong id="score-o" aria-label="Victorias de O">0</strong>
+      </article>
+    </section>
+
+    <section class="play-area" aria-label="Partida de tatetí">
+      <div class="status" role="status" aria-live="polite" aria-atomic="true">
+        <span class="phase" id="phase">01 / COLOCAR</span>
+        <h2 id="status-title">Turno de X</h2>
+        <p id="status-help">Elegí una casilla vacía para colocar tu ficha.</p>
+      </div>
+      <div class="board" id="board" role="group" aria-label="Tablero de tres filas y tres columnas">
+        <button type="button" class="cell" data-index="0" aria-label="Fila 1, columna 1: vacía"></button>
+        <button type="button" class="cell" data-index="1" aria-label="Fila 1, columna 2: vacía"></button>
+        <button type="button" class="cell" data-index="2" aria-label="Fila 1, columna 3: vacía"></button>
+        <button type="button" class="cell" data-index="3" aria-label="Fila 2, columna 1: vacía"></button>
+        <button type="button" class="cell" data-index="4" aria-label="Fila 2, columna 2: vacía"></button>
+        <button type="button" class="cell" data-index="5" aria-label="Fila 2, columna 3: vacía"></button>
+        <button type="button" class="cell" data-index="6" aria-label="Fila 3, columna 1: vacía"></button>
+        <button type="button" class="cell" data-index="7" aria-label="Fila 3, columna 2: vacía"></button>
+        <button type="button" class="cell" data-index="8" aria-label="Fila 3, columna 3: vacía"></button>
+      </div>
+      <div class="actions">
+        <button type="button" class="primary" id="new-round">Reiniciar partida <span aria-hidden="true">↗</span></button>
+        <button type="button" class="secondary" id="reset-scores">Borrar marcador</button>
+      </div>
+      <button type="button" class="draw-button" id="draw" hidden>Proponer empate</button>
+      <p class="draw-note" id="draw-note" hidden>Si ambos están de acuerdo, pueden cerrar la partida en empate.</p>
+    </section>
+
+    <details class="rules">
+      <summary>Cómo se juega <span aria-hidden="true">+</span></summary>
+      <ol>
+        <li>Dos jugadores comparten este dispositivo. X comienza y luego alternan turnos.</li>
+        <li>Cada jugador coloca sus <strong>tres fichas</strong> en casillas vacías.</li>
+        <li>Cuando las seis fichas están colocadas, elegí una ficha propia y después un destino vacío vecino. Los puntos indican los destinos disponibles.</li>
+        <li>Gana quien consiga tres fichas en una fila, columna o diagonal, en cualquiera de las dos fases.</li>
+      </ol>
+      <p><strong>Criterio de movimiento:</strong> interpretamos “punto más cercano” como una casilla contigua horizontal o vertical, sin saltos ni movimientos diagonales.</p>
+      <p>El reglamento no define empates. Como opción adicional, ambos jugadores pueden acordar uno mediante “Proponer empate”. No se declara empate al colocar las seis fichas.</p>
+      <a href="https://www.iafas.gov.ar/wp-content/uploads/2024/11/TATETI-Reglamento.pdf" target="_blank" rel="noopener noreferrer">Consultar reglamento de IAFAS ↗</a>
+    </details>
+    <footer>Alumno: Da Silva VIana Juan Martin<span>Actividad Aulica 18</span></footer>
+  </main>
+  <dialog id="draw-dialog" aria-labelledby="draw-title">
+    <h2 id="draw-title">¿Los dos acuerdan un empate?</h2>
+    <p>La partida terminará sin sumar victorias.</p>
+    <div class="actions">
+      <button type="button" class="primary" id="accept-draw">Sí, finalizar</button>
+      <button type="button" class="secondary" id="cancel-draw">Seguir jugando</button>
+    </div>
+  </dialog>
+</body>
+</html>

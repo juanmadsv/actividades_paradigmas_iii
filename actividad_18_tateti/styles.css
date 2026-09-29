@@ -1,0 +1,57 @@
+/* Sin fuentes, imágenes ni librerías externas: también funciona sin conexión. */
+:root { color-scheme: light; --paper: #f5f2e9; --ink: #173f3b; --muted: #657571; --orange: #a74424; --line: #d7ded5; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+button, summary, a { -webkit-tap-highlight-color: transparent; }
+button { font: inherit; cursor: pointer; }
+button:focus-visible, summary:focus-visible, a:focus-visible { outline: 3px solid var(--orange); outline-offset: 5px; }
+.game { width: min(100% - 36px, 660px); margin: 0 auto; padding: 48px 0 24px; }
+.header { text-align: center; }
+.eyebrow { font-size: 10px; font-weight: 800; letter-spacing: 2px; }
+h1 { margin: 8px 0 0; font-size: clamp(64px, 12vw, 88px); line-height: 1.1; letter-spacing: -7px; }
+h1 > span:not(.dot) { color: var(--orange); }
+.dot { color: var(--orange); }
+.header p { color: var(--muted); margin: 12px 0 30px; font-size: 14px; }
+.scores { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.player { display: flex; gap: 12px; align-items: center; padding: 18px; border: 1px solid var(--line); border-radius: 16px; transition: border-color .2s, background .2s; }
+.player.active { background: #e5ece2; border-color: var(--ink); }
+.symbol { font-size: 32px; font-weight: 800; }
+.x { color: var(--ink); } .o { color: var(--orange); }
+.player h2 { margin: 0; font-size: 14px; }
+.player p { margin: 4px 0 0; font-size: 11px; color: var(--muted); }
+.player strong { margin-left: auto; font-size: 28px; }
+.play-area { text-align: center; }
+.status { margin: 28px 0 18px; min-height: 98px; }
+.phase { font-size: 10px; font-weight: 800; letter-spacing: 1.5px; color: var(--muted); }
+.status h2 { margin: 9px 0 6px; font-size: 25px; }
+.status p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+.board { width: min(100%, 360px); margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 9px; }
+.cell { aspect-ratio: 1; border: 1px solid var(--line); border-radius: 17px; background: #fffdf7; color: var(--ink); font-size: clamp(42px, 10vw, 64px); font-weight: 750; display: grid; place-items: center; transition: background .15s, transform .15s, border-color .15s; }
+.cell:hover:not(:disabled) { background: #e9eee3; transform: translateY(-2px); }
+.cell.o { color: var(--orange); }
+.cell.selected { border: 3px solid var(--ink); background: #e5ece2; }
+.cell.target::after { content: ""; width: 16px; height: 16px; border-radius: 50%; background: #77938a; }
+.cell.winner { background: var(--ink); color: #fffdf7; border-color: var(--ink); }
+.cell:disabled { cursor: default; opacity: 1; }
+.actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 22px; }
+.primary, .secondary { padding: 13px 20px; border-radius: 10px; font-size: 13px; font-weight: 650; }
+.primary { background: var(--ink); color: #fffdf7; border: 1px solid var(--ink); }
+.primary span { margin-left: 18px; }
+.primary:hover { background: #245c55; }
+.secondary { background: transparent; border: 1px solid var(--line); color: var(--ink); }
+.secondary:hover { background: #e5ece2; }
+.draw-button { margin-top: 18px; padding: 6px; background: none; border: none; color: var(--muted); text-decoration: underline; font-size: 12px; }
+.draw-note { margin: 4px 0; font-size: 11px; color: var(--muted); }
+.rules { margin-top: 30px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 17px 0; font-size: 13px; line-height: 1.7; }
+summary { cursor: pointer; list-style: none; font-weight: 700; display: flex; justify-content: space-between; }
+summary::-webkit-details-marker { display: none; }
+summary span { font-size: 20px; line-height: 1; }
+.rules[open] summary span { transform: rotate(45deg); }
+.rules ol { padding-left: 22px; } .rules li { margin-bottom: 8px; }
+.rules p { color: var(--muted); } .rules a { color: var(--ink); }
+footer { display: flex; justify-content: space-between; gap: 12px; margin-top: 20px; font-size: 10px; color: var(--muted); }
+dialog { width: min(100% - 36px, 430px); background: var(--paper); color: var(--ink); padding: 28px; border: 1px solid var(--line); border-radius: 20px; }
+dialog::backdrop { background: #173f3b99; } dialog h2 { margin-top: 0; font-size: 22px; } dialog p { font-size: 14px; }
+[hidden] { display: none !important; }
+@media (max-width: 420px) { .game { padding-top: 28px; } .player { padding: 13px 10px; gap: 8px; } .player p { font-size: 10px; } .symbol { font-size: 26px; } .player strong { font-size: 24px; } footer { flex-direction: column; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
